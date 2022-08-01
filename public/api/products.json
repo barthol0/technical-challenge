@@ -1,0 +1,130 @@
+{
+  "products": [
+    {
+      "puid": "com.astutegraphics.astutebuddy",
+      "name": "AstuteBuddy",
+      "brief": "Keyboard shortcut panel",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.autosaviour",
+      "name": "Autosaviour",
+      "brief": "Autosave, backup + reminders",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.colliderscribe",
+      "name": "ColliderScribe",
+      "brief": "Precise alignment + selection",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.directprefs",
+      "name": "DirectPrefs",
+      "brief": "Nudge distance, angles + guides",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.dynamicsketch",
+      "name": "DynamicSketch",
+      "brief": "Intuitive vector sketching",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.findreplace",
+      "name": "FindReplace",
+      "brief": "Instantly locate + modify",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.inkflow",
+      "name": "InkFlow",
+      "brief": "Drawing + lettering",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.inkquest",
+      "name": "InkQuest",
+      "brief": "Pre-press controls + checks",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.inkscribe",
+      "name": "InkScribe",
+      "brief": "Precise path creation",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.mirrorme",
+      "name": "MirrorMe",
+      "brief": "Instant symmetry",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.phantasm",
+      "name": "Phantasm",
+      "brief": "Instant color control + halftone",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.randomino",
+      "name": "Randomino",
+      "brief": "Randomize in Illustrator",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.rasterino",
+      "name": "Rasterino",
+      "brief": "Image crop + editing",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.reform",
+      "name": "Reform",
+      "brief": "Interactive path editing",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.stipplism",
+      "name": "Stipplism",
+      "brief": "Live stipple effect",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.stylism",
+      "name": "Stylism",
+      "brief": "Live effects made easy",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.subscribe",
+      "name": "SubScribe",
+      "brief": "Create accurate artwork",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.texturino",
+      "name": "Texturino",
+      "brief": "Textures + opacity brush",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.vectorfirstaid",
+      "name": "VectorFirstAid",
+      "brief": "Clean up vector documents",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.vectorscribe",
+      "name": "VectorScribe",
+      "brief": "Editing, shapes, corners + measure",
+      "installed": false
+    },
+    {
+      "puid": "com.astutegraphics.widthscribe",
+      "name": "WidthScribe",
+      "brief": "Variable stroke width effects",
+      "installed": false
+    }
+  ]
+}
