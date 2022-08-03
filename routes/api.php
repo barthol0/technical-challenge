@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/plugin/install', [PluginController::class, 'install']);
+Route::post('/plugin/remove', [PluginController::class, 'remove']);
