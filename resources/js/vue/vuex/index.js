@@ -25,55 +25,56 @@ export default new Vuex.Store({
     },
     actions: {
         fetchProducts({ commit }) {
-            axios
-                .get("/api/products.json")
-                .then((response) => {
-                    commit("storeProducts", response.data.products);
-                })
-                .catch((err) => {
-                    //handle api error
-                    this._vm.$toast.error(
-                        "Error fetching products!\nCode: " + err.response.status
-                    );
-                });
+            return new Promise((resolve, reject) => {
+                axios
+                    .get("/api/products.json")
+                    .then((response) => {
+                        resolve(response);
+                        commit("storeProducts", response.data.products);
+                    })
+                    .catch((err) => {
+                        //handle api error
+                        reject(err);
+                    });
+            });
         },
         installPlugin(context, payload) {
-            axios
-                .post("/api/plugin/install", {
-                    plugin_id: payload,
-                })
-                .then((response) => {
-                    context.commit(
-                        "installPluginStore",
-                        response.data.plugin_id
-                    );
-                    this._vm.$toast.success('Plugin installed successfully')
-                })
-                .catch((err) => {
-                    //handle api error
-                    this._vm.$toast.error(
-                        "Error installing plugin!\nCode: " + err.response.status
-                    );
-                });
+            return new Promise((resolve, reject) => {
+                axios
+                    .post("/api/plugin/install", {
+                        plugin_id: payload,
+                    })
+                    .then((response) => {
+                        context.commit(
+                            "installPluginStore",
+                            response.data.plugin_id
+                        );
+                        resolve(response);
+                    })
+                    .catch((err) => {
+                        //handle api error
+                        reject(err.response);
+                    });
+            });
         },
         removePlugin(context, payload) {
-            axios
-                .post("/api/plugin/remove", {
-                    plugin_id: payload,
-                })
-                .then((response) => {
-                    context.commit(
-                        "removePluginStore",
-                        response.data.plugin_id
-                    );
-                    this._vm.$toast.success('Plugin removed successfully')
-                })
-                .catch((err) => {
-                    //handle api error
-                    this._vm.$toast.error(
-                        "Error removing plugin!\nCode: " + err.response.status
-                    );
-                });
+            return new Promise((resolve, reject) => {
+                axios
+                    .post("/api/plugin/remove", {
+                        plugin_id: payload,
+                    })
+                    .then((response) => {
+                        context.commit(
+                            "removePluginStore",
+                            response.data.plugin_id
+                        );
+                        resolve(response);
+                    })
+                    .catch((err) => {
+                        //handle api error
+                        reject(err.response);
+                    });
+            });
         },
     },
 });

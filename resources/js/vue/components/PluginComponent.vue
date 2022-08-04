@@ -33,10 +33,30 @@ export default {
     props: ["puid", "name", "brief", "installed"],
     methods: {
         installPlugin(puid) {
-            this.$store.dispatch("installPlugin", puid);
+            this.$store
+                .dispatch("installPlugin", puid)
+                .then((res) => {
+                    this.$toast.success("Plugin installed successfully");
+                })
+                .catch((err) => {
+                    //handle api error
+                    this.$toast.error(
+                        "Error installing plugin!\nCode: " + err.status
+                    );
+                });
         },
         removePlugin(puid) {
-            this.$store.dispatch("removePlugin", puid);
+            this.$store
+                .dispatch("removePlugin", puid)
+                .then((res) => {
+                    this.$toast.success("Plugin removed successfully");
+                })
+                .catch((err) => {
+                    // catch the error
+                    this.$toast.error(
+                        "Error removing plugin!\nCode: " + err.status
+                    );
+                });
         },
     },
 };
