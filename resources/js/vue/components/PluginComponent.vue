@@ -8,9 +8,19 @@
             <button
                 v-if="installed"
                 @click="removePlugin(puid)"
+                @mouseover="hoverRemoveButton = true"
+                @mouseleave="hoverRemoveButton = false"
                 class="btn green btn-remove"
             >
-                <font-awesome-icon icon="fa-solid fa-check" />
+                <font-awesome-icon
+                    icon="fa-solid fa-check"
+                    v-show="!hoverRemoveButton"
+                />
+                <font-awesome-icon
+                    icon="fa-solid fa-x"
+                    v-show="hoverRemoveButton"
+                />
+                <span v-show="hoverRemoveButton">Remove</span>
             </button>
             <button
                 v-else
@@ -31,6 +41,11 @@
 export default {
     name: "PluginComponent",
     props: ["puid", "name", "brief", "installed"],
+    data() {
+        return {
+            hoverRemoveButton: false,
+        };
+    },
     methods: {
         installPlugin(puid) {
             this.$store
